@@ -1,0 +1,21 @@
+{% extends 'index.html' %} {% block content %} {% load crispy_forms_tags %}
+{%load static %}
+
+<link rel="stylesheet" href="{% static 'css/newcard.css' %}" />
+<br><br><br>
+<H1 style="margin-left: 40%; margin-top: 20%;">Notes Will Be Displayed Here</H1>
+
+<div class="container notesCnt mt-4">
+  {% include 'authentication/messages.html' %}
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="container-lg-6">
+      <form
+        class="d-flex"
+        method="post"
+        role="search"
+        
+      >
+        {% csrf_token %}
+
+        <!-- <input id="autocomplete" class="autocomplete form-control me-2" type="text" name="searchQ" placeholder="Search" aria-label="Search"> -->
+{% endblock %} 
